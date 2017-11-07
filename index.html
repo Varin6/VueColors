@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <title>Lesson</title>
+</head>
+<body>
+<style>
+    * {
+        box-sizing: border-box;
+        outline: none;
+    }
+    body, html {
+        margin:0;
+    }
+    #app {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        transition-duration: .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+    textarea {
+        width: 100%;
+        height: auto;
+        background: transparent;
+        text-align: center;
+        font-weight: 800;
+        font-size: 30px;
+        font-family: 'Berkshire Swash', cursive;
+        transition-duration: .5s;
+        position: absolute;
+        border:0;
+        padding: 0 30px;
+        resize: none;
+    }
+
+</style>
+
+<div id="app" v-bind:style="{ backgroundColor: '#' + bgColour }">
+    <textarea onkeydown="textAreaAdjust(this)" onkeyup="textAreaAdjust(this)" v-model="colour" v-bind:style="{ color: txtColour }"></textarea>
+
+</div>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.js"></script>
+<script src="functions.js"></script>
+
+</body>
+</html>
