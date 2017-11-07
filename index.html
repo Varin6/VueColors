@@ -43,12 +43,14 @@
 </style>
 
 <div id="app" v-bind:style="{ backgroundColor: '#' + bgColour }">
-    <textarea onkeydown="textAreaAdjust(this)" onkeyup="textAreaAdjust(this)" v-model="colour" v-bind:style="{ color: txtColour }"></textarea>
+    <textarea id="mytextarea" autofocus="autofocus" onkeydown="textAreaAdjust(this)" onkeyup="textAreaAdjust(this)" v-model="colour" v-bind:style="{ color: txtColour }"></textarea>
 
 </div>
 
 <script src="vue101.js"></script>
 <script src="functions.js"></script>
+
+<script> document.getElementById('mytextarea').focus(); </script>
 
 </body>
 </html>
