@@ -2,7 +2,7 @@ var bish = new Vue({
     el: '#app',
 
     data: {
-        colour: 'I called my cat Boobeh.'
+        colour: 'I named my cat Boobeh'
     },
     computed: {
         bgColour : function () {
