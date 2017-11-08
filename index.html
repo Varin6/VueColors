@@ -31,7 +31,7 @@
         background: transparent;
         text-align: center;
         font-weight: 800;
-        font-size: 30px;
+        font-size: 36px;
         font-family: 'Berkshire Swash', cursive;
         transition-duration: .5s;
         position: absolute;
@@ -43,7 +43,7 @@
 </style>
 
 <div id="app" v-bind:style="{ backgroundColor: '#' + bgColour }">
-    <textarea id="mytextarea" autofocus="autofocus" onkeydown="textAreaAdjust(this)" onkeyup="textAreaAdjust(this)" v-model="colour" v-bind:style="{ color: txtColour }"></textarea>
+    <textarea id="mytextarea" autofocus="autofocus" v-on:keydown="resizeTextarea" v-model="colour" v-bind:style="{ color: txtColour }"></textarea>
 
 </div>
 

@@ -55,11 +55,23 @@ var bish = new Vue({
             }
             return invertColor(this.bgColour);
         }
+    },
+    methods : {
+        resizeTextarea : function (e) {
+
+            setTimeout(function(){
+                e.target.style.height = 'auto';
+                // for box-sizing other than "content-box" use:
+                // el.style.cssText = '-moz-box-sizing:content-box';
+                e.target.style.height = e.target.scrollHeight + 'px';
+            },0);
+
+        }
     }
 });
 
 
-function textAreaAdjust(o) {
-    o.style.height = "1px";
-    o.style.height = (25+o.scrollHeight)+"px";
-}
+// function textAreaAdjust(o) {
+//     o.style.height = "1px";
+//     o.style.height = (25+o.scrollHeight)+"px";
+// }
