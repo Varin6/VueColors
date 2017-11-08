@@ -53,7 +53,8 @@ var bish = new Vue({
                 var zeros = new Array(len).join('0');
                 return (zeros + str).slice(-len);
             }
-            return invertColor(this.bgColour);
+            //console.log(invertColor(this.bgColour));
+            return invertColor(this.bgColour).toUpperCase();
         }
     },
     methods : {
@@ -61,8 +62,6 @@ var bish = new Vue({
 
             setTimeout(function(){
                 e.target.style.height = 'auto';
-                // for box-sizing other than "content-box" use:
-                // el.style.cssText = '-moz-box-sizing:content-box';
                 e.target.style.height = e.target.scrollHeight + 'px';
             },0);
 
@@ -70,8 +69,6 @@ var bish = new Vue({
     }
 });
 
+//Other JS
 
-// function textAreaAdjust(o) {
-//     o.style.height = "1px";
-//     o.style.height = (25+o.scrollHeight)+"px";
-// }
+document.getElementById('mytextarea').focus();
